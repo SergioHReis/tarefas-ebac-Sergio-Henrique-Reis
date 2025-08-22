@@ -1,0 +1,52 @@
+ALGORITMO HORA_DE_ACORDAR
+INICIO
+    DECLARAR acordei: LOGICO
+    DECLARAR horario_atual: REAL
+    DECLARAR horario_desejado: REAL
+    DECLARAR tentativas: INTEIRO
+    
+    acordei <- FALSO
+    tentativas <- 0
+    horario_desejado <- 7.00
+    
+    ESCREVER "ALGORITMO: HORA DE ACORDAR"
+    ESCREVER "Horario desejado para acordar: 7:00"
+    ESCREVER ""
+    
+    ENQUANTO (acordei = FALSO) FACA
+        ESCREVER "Verificando horario atual..."
+        LER horario_atual
+        
+        SE (horario_atual >= horario_desejado) ENTAO
+            ESCREVER "ALARME: Hora de acordar!"
+            ESCREVER "Desligando alarme..."
+            ESCREVER "Levantando da cama..."
+            ESCREVER "1. Abrindo os olhos"
+            ESCREVER "2. Respirando fundo"
+            ESCREVER "3. Esticando bracos e pernas"
+            ESCREVER "4. Sentando na cama"
+            ESCREVER "5. Levantando completamente"
+            acordei <- VERDADEIRO
+            ESCREVER "Status: ACORDADO com sucesso!"
+        SENAO
+            tentativas <- tentativas + 1
+            ESCREVER "Ainda nao e hora de acordar."
+            ESCREVER "Horario atual:", horario_atual
+            ESCREVER "Faltam", (horario_desejado - horario_atual), "horas"
+            ESCREVER "Tentativa numero:", tentativas
+            ESCREVER "Continuando a dormir..."
+            ESCREVER ""
+            ESCREVER "Aguardando 30 minutos..."
+            ESCREVER "Dormindo..."
+            ESCREVER ""
+        FIM_SE
+    FIM_ENQUANTO
+    
+    ESCREVER ""
+    ESCREVER "RESUMO DO PROCESSO"
+    ESCREVER "Total de tentativas:", tentativas
+    ESCREVER "Horario que acordou:", horario_atual
+    ESCREVER "Status final: ACORDADO"
+    ESCREVER "Bom dia! Hora de comecar o dia!"
+    
+FIM_ALGORITMO
