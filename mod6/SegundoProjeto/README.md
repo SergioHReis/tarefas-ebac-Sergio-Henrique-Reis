@@ -35,3 +35,4 @@ Algoritmo funcionando, estrutura organizada e pronto para entrega.
 **Tarefa:** Algoritmo em Portugol  
 **Aluno:** Sergio Henrique Reis  
 **Data:** 22/08/2025
+lemb
